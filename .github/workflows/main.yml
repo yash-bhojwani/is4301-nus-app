@@ -1,0 +1,17 @@
+name: CI Build
+run-name: ${{ github.actor }} pushed to ${{ github.ref_name }} - building
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm ci
+      - name: Build the app
+        run: npm run build
