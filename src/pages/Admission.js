@@ -1,0 +1,23 @@
+const steps = [
+    "Understanding Admission requirements",
+    "Submit application online",
+    "Upload supporting documents",
+    "Make application fee payment",
+    "Check application status",
+];
+
+function Admission() {
+    return (
+        <section className="page">
+            <h1>Admission</h1>
+            <p>Admission process flow:</p>
+            <ul className="admission-list">
+                {steps.map((step) => (
+                    <li key={step}>{step}</li>
+                ))}
+            </ul>
+        </section>
+    );
+}
+
+export default Admission;

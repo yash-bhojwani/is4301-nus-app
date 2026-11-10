@@ -1,38 +1,103 @@
 .App {
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Navigation panel */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 64px;
+  background-color: #003d7c;
+  /* NUS blue */
+}
+
+.navbar-brand {
+  color: #ef7c00;
+  /* NUS orange */
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-links a.active {
+  background-color: #ef7c00;
+}
+
+/* Page layout */
+.App-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page h1 {
+  color: #003d7c;
+}
+
+/* Home */
+.home {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-logo {
+  max-width: 320px;
+  width: 100%;
+  margin-top: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-tagline {
+  font-size: 1.5rem;
+  color: #003d7c;
+  margin-top: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Academics table */
+.modules-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.modules-table th,
+.modules-table td {
+  border: 1px solid #d0d7de;
+  padding: 12px 16px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modules-table th {
+  background-color: #003d7c;
+  color: #ffffff;
+}
+
+.modules-table tbody tr:nth-child(even) {
+  background-color: #eef3f9;
+}
+
+/* Admission list */
+.admission-list li {
+  font-size: 1.1rem;
+  padding: 6px 0;
 }
